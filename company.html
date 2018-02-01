@@ -6,6 +6,8 @@
     <title>Company Tab</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- load jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -14,11 +16,43 @@
       <ul>
         <li><a href="#">home</a></li>
         <li><a href="#">employee</a></li>
-        <li><a href="#" class="active">company</a></li>
+        <li class="active"><a href="#">company</a></li>
         <li><a href="#">services</a></li>
         <li><a href="#">contact</a></li>
       </ul>
     </nav>
+
+    <div class="col-3" id="sidebarContainer">
+      <div class="sidebar">
+        <button id="login" href="#loginBox" type="button" class="buttonLogin loginWindow" onclick="login(event, 'login')">Login</button>
+        <!-- Tab Links -->
+        <div class="tab">
+          <button type="button" class="tablinks active" id="defaultOpen" onclick="openTab(event, 'news')">News</button>
+          <button type="button" class="tablinks" onclick="openTab(event, 'archive')">Archive</button>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="news" class="tabcontent">
+        <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      </div>
+
+      <div id="archive" class="tabcontent">
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+        <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-9">
@@ -42,23 +76,29 @@
       <div class="mobileSpan">
         <div id="spanTitle">Amazing Mobile Info</div>
         <div class="row">
-          <div id="mobileInfo" class="col-7">
+          <div id="mobileInfo" class="col-9">
             Vestibulum torto quam, feugiat vitae, ultricies eget, empor sit amet, ante.
             Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
           </div>
+          <img src="assets/images/iphone.png" alt="iphone" id="iphone">
         </div>
       </div>
-    </div>
+    </div> <!-- end first div column -->
+
+    <div class="col-9">
+      <h2 id="rates">Rates | </h2><h2 id="checkThemOut">  Check them out.</h2>
+
+      <table>
+        <div id="dynamicTable"></div>
+      </table>
+
+    </div> <!-- end second div column -->
+
   </div> <!-- end first row -->
 
-    <h2>Rates | Check them out.</h2>
-
-    <table>
-      <div id="dynamicTable"></div>
-    </table>
 
     <footer>
-      &copy 2014 URBank 
+      &copy 2014 URBank
       <ul>
         <li><a href="#">home</a></li>
         <li><a href="#">employee</a></li>
@@ -68,36 +108,32 @@
       </ul>
     </footer>
 
-    <div class="sidebar">
-      <button id="login" type="button" name="button">Login</button>
-      <!-- Tab Links -->
-      <div class="tab">
-        <button type="button" class=tablinks>News</button>
-        <button type="button" class=tablinks>Archive</button>
-      </div>
-    </div>
+    <!-- Modal -->
+    <div id="loginBox" class="loginPopup">
+        <a href="#" role=button class="close"><img src="assets/images/times.png" class="btnClose" title="Close Window" alt="Close" /></a>
+        <form method="post" class="signin" action="#">
+            <h3 class="loginTitle">Sign In To Your Account</h3>
+            <fieldset class="textbox">
 
-    <!-- Tab Content -->
-    <div id="news" class="tabcontent">
-      <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-      <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-      <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-    </div>
+                <label class="username">
+                  <span>Username</span>
+                  <input role=textbox id="username" name="username" value="" type="text" autocomplete="on" placeholder="">
+                </label>
+                <label class="password">
+                  <span>Password</span>
+                  <input role=textbox id="password" name="password" value="" type="password" placeholder="">
+                </label>
 
-    <div id="archive" class="tabcontent">
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
-    </div>
+                <button role=button class="submitButton" type="button">Login</button>
 
+            </fieldset>
+        </form>
+    </div>
+    <!-- modal -->
+
+
+    <!-- load javascript file -->
+    <script type="text/javascript" src="assets/javascript/main.js"></script>
   </body>
 
 </html>
