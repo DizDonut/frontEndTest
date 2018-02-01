@@ -21,6 +21,18 @@ function openTab(e, tabName) {
 
 }
 
+/*
+  compare function to sort through the data below
+*/
+function compare(a, b){
+  if (a.apy < b.apy) {
+    return -1;
+  }
+  if (a.apy > b.apy) {
+    return 1;
+  }
+};
+
 const data = [
   {
     "name": "Big Guy Financial",
@@ -49,25 +61,26 @@ const data = [
   }
 ];
 
-
 $(document).ready(function() {
+  //sort data first
+  data.sort(compare);
 
-   let table = $("#dynamicTable");
-   // generating table
-   .forEach(element => {table.prepend(`<tr> <td>${element.name}</td>
-                   <td>${element.apy.toFixed(2)}%</td>
-                   <td>$${element.earnings.toFixed(2)}</td>
-               </tr>`);
-             },
-           );
+  let table = $("#dynamicTable");
+  // generating table
+  data.forEach(element => {table.prepend(`<tr> <td>${element.name}</td>
+                 <td>${element.apy.toFixed(2)}%</td>
+                 <td>$${element.earnings.toFixed(2)}</td>
+             </tr>`);
+           },
+         );
 
-    table.prepend(` <tr>
-                   <td></td>
-                   <td><sub>Annual Percentage Yeld </sub></td>
-                   <td><sub>Est. Earnings for 1 Year* </sub></td>
-                  </tr>`);
+  table.prepend(`<th></th>
+                 <th><sub>Annual Percentage Yield </sub></th>
+                 <th><sub> Est. Earnings for 1 Year*</sub></th>`);
 
-}
+  table.append(`<th></th>
+                <th></th>
+                <th>*Based on $50,000 deposit.</th>`)                 
 
 
   $('button.loginWindow').click(function() {
