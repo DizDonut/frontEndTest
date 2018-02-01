@@ -2,11 +2,101 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Tab</title>
-    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
 
   <body>
+    <nav>
+      <img src="assets/images/urbank.png" id="logo">
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">employee</a></li>
+        <li><a href="#" class="active">company</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="row">
+      <div class="col-9">
+        <section>
+          <header><h1>Best Bank Ever!</h1></header>
+          <p>Pellentesque habitant morbi tristique senectus et netus et <a href="#">malesuada</a> fames ac turpis egestas.
+            Vestibulum torto quam, feugiat vitae, ultricies eget, empor sit amet, ante.  Donec eu liebeor sit amet
+            quam egestas semper.  Aenean ultricies mi vitae est.  Mauris <a href="#">placerat</a> eleifend leo.  Quisque
+            sit amet est et sapien ullamcorper phareta.</p>
+        </section>
+
+      <p class="awesomeListTitle">Reasons We're Awesome</p>
+        <ul class="awesomeList">
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Aliquam tincidunt mauris eu risus</li>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Vestibulum auctor dapibus neque</li>
+        </ul>
+
+      <div class="mobileSpan">
+        <div id="spanTitle">Amazing Mobile Info</div>
+        <div class="row">
+          <div id="mobileInfo" class="col-7">
+            Vestibulum torto quam, feugiat vitae, ultricies eget, empor sit amet, ante.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end first row -->
+
+    <h2>Rates | Check them out.</h2>
+
+    <table>
+      <div id="dynamicTable"></div>
+    </table>
+
+    <footer>
+      &copy 2014 URBank 
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">employee</a></li>
+        <li><a href="#" class="active">company</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </footer>
+
+    <div class="sidebar">
+      <button id="login" type="button" name="button">Login</button>
+      <!-- Tab Links -->
+      <div class="tab">
+        <button type="button" class=tablinks>News</button>
+        <button type="button" class=tablinks>Archive</button>
+      </div>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="news" class="tabcontent">
+      <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      <h3 class="newsTabContentHeaders">Lorem ipsum dolor</h3>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    </div>
+
+    <div id="archive" class="tabcontent">
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+      <h3 class="archiveTabContentHeaders">Lorem ipsum dolor</h3>
+    </div>
 
   </body>
 

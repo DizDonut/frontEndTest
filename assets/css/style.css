@@ -1,0 +1,131 @@
+body {
+  font-family: "Open-Sans", sans-serif;
+  line-height: 1.5;
+}
+
+/* Create grid */
+
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* navigation bar styling */
+nav {
+  background-color: #368AB9;
+  display: table;
+  width: 100%;
+}
+
+nav > ul > li {
+  list-style: none;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#logo {
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+nav > ul {
+  float: right;
+  margin-right: 5%;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: #eee;
+}
+
+nav > ul > li > a.active {
+  background-color: #086EA7;
+}
+
+/* Main body styling */
+
+section > header > h1 {
+  color: #620361;
+  font-weight: lighter !important;
+  font-size: xx-large;
+}
+
+.awesomeListTitle {
+  font-weight: bolder;
+}
+
+.awesomeList {
+  line-height: 1.5;
+}
+
+.mobileSpan {
+  background-color: #B9D9C2;
+  padding: 15px;
+  line-height: 1.5;
+}
+
+#mobileInfo {
+  padding: inherit !important;
+}
+
+#spanTitle {
+  font-weight: bolder;
+  color: #620361;
+}
+
+/* Sidebar Styling */
+
+#login {
+  border: none;
+  color: #eee;
+  background-color: #620361;
+}
+
+/* Footer Styling */
+
+footer {
+  background-color: #E7E8EA;
+  width: 100%;
+}
+
+footer > ul > li {
+  list-style-type: none;
+  display: table-cell;
+}
+
+footer > ul > li > a {
+  text-decoration: none;
+  color: #368AB9;
+}
+
+footer > ul {
+  float: right;
+  margin: 0px;
+  padding-left: 0px;
+}
